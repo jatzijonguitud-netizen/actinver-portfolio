@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio de Inversión – Andrea | Actinver</title>
+  <meta name="description" content="Propuesta de Gestión Patrimonial para Andrea – Portafolio Institucional de Inversión. Actinver, Mayo 2026."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/charts.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  CHROME                                               -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="progress-bar-outer"><div id="progress-bar"></div></div>
+
+<div id="toc-panel"></div>
+
+<div id="nav-controls">
+  <button class="nav-btn" onclick="goPrev()" title="Anterior (←)">&#8592;</button>
+  <span id="slide-counter">1 / 18</span>
+  <button class="nav-btn" onclick="goNext()" title="Siguiente (→)">&#8594;</button>
+  <button class="nav-btn" onclick="toggleFullscreen()" title="Pantalla completa (F)" style="font-size:14px">⛶</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PRESENTACIÓN                                          -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="presentation">
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 1 · PORTADA                                    -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide active" id="slide-cover" data-title="Portada">
+  <div class="cover-bg"></div>
+  <div class="cover-grid"></div>
+  <div class="cover-content">
+    <div class="cover-eyebrow anim-fade-in">
+      <div class="cover-eyebrow-line"></div>
+      <span class="cover-eyebrow-text">Actinver · Wealth Management · Mayo 2026</span>
+    </div>
+    <h1 class="cover-title anim-fade-up anim-delay-1">
+      Propuesta de Inversión<br/>
+      para <span class="highlight">Andrea</span>
+    </h1>
+    <p class="cover-subtitle anim-fade-up anim-delay-2">
+      Portafolio de Máximo Sharpe construido mediante optimización de Markowitz,<br/>
+      validado con Monte Carlo y backtesting histórico de 5 años.
+    </p>
+    <div class="cover-metrics anim-fade-up anim-delay-3">
+      <div class="cover-metric">
+        <span class="cover-metric-value">21.1%</span>
+        <span class="cover-metric-label">Rendimiento Esperado</span>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-metric">
+        <span class="cover-metric-value">1.2283</span>
+        <span class="cover-metric-label">Sharpe Ratio</span>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-metric">
+        <span class="cover-metric-value">13.4%</span>
+        <span class="cover-metric-label">Riesgo Anual</span>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-metric">
+        <span class="cover-metric-value">$400K</span>
+        <span class="cover-metric-label">Capital Inicial</span>
+      </div>
+    </div>
+    <div class="cover-chips anim-fade-in anim-delay-4">
+      <span class="cover-chip">13 Activos</span>
+      <span class="cover-chip">5 Sectores + ETFs</span>
+      <span class="cover-chip">Markowitz Optimization</span>
+      <span class="cover-chip">Monte Carlo 500 sim.</span>
+      <span class="cover-chip">Backtesting 5 años</span>
+      <span class="cover-chip">NYSE · NASDAQ · BMV</span>
+    </div>
+  </div>
+  <div class="cover-right-panel anim-fade-in anim-delay-5">
+    <div class="cover-card">
+      <div class="cover-card-header">Resumen del Portafolio</div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Inversión Inicial</span>
+        <span class="cover-card-val gold">$400,000 USD</span>
+      </div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Horizonte</span>
+        <span class="cover-card-val">Largo Plazo (30 años)</span>
+      </div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Estrategia</span>
+        <span class="cover-card-val">Máximo Sharpe</span>
+      </div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Tasa Libre de Riesgo</span>
+        <span class="cover-card-val">4.59% (T-Bond 10Y)</span>
+      </div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Rebalanceo</span>
+        <span class="cover-card-val">Trimestral</span>
+      </div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Clasificación de Riesgo</span>
+        <span class="cover-card-val gold">Moderado-Agresivo</span>
+      </div>
+      <div class="cover-card-row">
+        <span class="cover-card-label">Benchmark</span>
+        <span class="cover-card-val">S&P 500 (ACTI500)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 2 · EXECUTIVE SUMMARY                          -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-exec" data-title="Executive Summary">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo">
+        <div class="logo-mark">A</div>
+        <span class="logo-text">ACTINVER</span>
+      </div>
+      <span class="slide-tag">| Executive Summary</span>
+    </div>
+    <div class="header-right">
+      <div class="act-name">Portafolio Andrea</div>
+      <div class="act-date">Mayo 2026</div>
+    </div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Executive Summary</div>
+      <h2 class="slide-title">La estrategia en menos de 30 segundos</h2>
+      <p class="slide-desc">Portafolio de Máximo Sharpe (Markowitz) con 13 activos globales diversificados. Supera al benchmark con menor riesgo relativo y el mejor perfil rendimiento-riesgo.</p>
+    </div>
+
+    <!-- KPIs principales -->
+    <div class="kpi-grid anim-fade-up anim-delay-2">
+      <div class="kpi-card gold-accent">
+        <div class="kpi-icon">📈</div>
+        <div class="kpi-value gold" data-count="21.10" data-suffix="%" data-decimals="2">21.10%</div>
+        <div class="kpi-label">Rendimiento Anual</div>
+        <div class="kpi-sub">vs 12.40% benchmark S&P 500</div>
+        <div class="kpi-badge">↑ +8.7pp Alpha</div>
+      </div>
+      <div class="kpi-card gold-accent">
+        <div class="kpi-icon">⭐</div>
+        <div class="kpi-value gold" data-count="1.2283" data-decimals="4">1.2283</div>
+        <div class="kpi-label">Sharpe Ratio</div>
+        <div class="kpi-sub">vs 0.79 del S&P 500</div>
+        <div class="kpi-badge">↑ Superior al mercado</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-value" data-count="13.44" data-suffix="%" data-decimals="2">13.44%</div>
+        <div class="kpi-label">Riesgo Anual (σ)</div>
+        <div class="kpi-sub">Volatilidad controlada</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🛡️</div>
+        <div class="kpi-value" data-count="13.13" data-prefix="-$" data-decimals="0">-$125,100</div>
+        <div class="kpi-label">VaR 99% Anual</div>
+        <div class="kpi-sub">Riesgo máximo esperado</div>
+      </div>
+    </div>
+
+    <!-- Grid inferior -->
+    <div class="summary-grid anim-fade-up anim-delay-3">
+      <div class="info-box">
+        <div class="info-box-title">Métricas de Riesgo-Rendimiento</div>
+        <div class="info-row"><span class="info-label">Rendimiento Anual del Portafolio</span><span class="info-value positive">21.10%</span></div>
+        <div class="info-row"><span class="info-label">Riesgo (Desviación Estándar Anual)</span><span class="info-value">13.44%</span></div>
+        <div class="info-row"><span class="info-label">Sharpe Ratio</span><span class="info-value gold">1.2283</span></div>
+        <div class="info-row"><span class="info-label">Treynor Ratio</span><span class="info-value">0.2170</span></div>
+        <div class="info-row"><span class="info-label">Alfa de Jensen</span><span class="info-value positive">+0.1651</span></div>
+        <div class="info-row"><span class="info-label">Beta del Portafolio</span><span class="info-value">0.7591</span></div>
+        <div class="info-row"><span class="info-label">VaR 99% Anual (%)</span><span class="info-value" style="color:var(--danger)">-31.28%</span></div>
+        <div class="info-row"><span class="info-label">VaR 99% Anual (USD)</span><span class="info-value" style="color:var(--danger)">-$125,100</span></div>
+      </div>
+      <div>
+        <div class="info-box mb-16" style="background:var(--white);">
+          <div class="info-box-title">Comparativo vs Benchmark</div>
+          <div class="info-row"><span class="info-label">Portafolio Andrea</span><span class="info-value positive">21.10%</span></div>
+          <div class="info-row"><span class="info-label">S&P 500 (Benchmark)</span><span class="info-value">≈12.40%</span></div>
+          <div class="info-row"><span class="info-label">Alpha Generado</span><span class="info-value positive">+8.70pp</span></div>
+          <div class="info-row"><span class="info-label">Sharpe Portafolio</span><span class="info-value gold">1.2283</span></div>
+          <div class="info-row"><span class="info-label">Sharpe Benchmark</span><span class="info-value">0.79</span></div>
+        </div>
+        <div class="highlight-box">
+          <p class="text-xs text-gray" style="line-height:1.6;"><strong style="color:var(--blue);">Ventaja competitiva:</strong> El portafolio genera <strong>+8.7pp de alpha anual</strong> sobre el S&P 500, con un Sharpe Ratio <strong>55% superior</strong> al benchmark, manteniendo una beta defensiva de <strong>0.76</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Datos al <span class="footer-gold">Mayo 2026</span> · Rendimientos históricos no garantizan resultados futuros</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 3 · PERFIL DE ANDREA                           -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-andrea" data-title="Perfil de Andrea">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Acto I · Conociendo a Andrea</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Acto I</div>
+      <h2 class="slide-title">¿Quién es Andrea y qué necesita?</h2>
+    </div>
+    <div class="profile-grid anim-fade-up anim-delay-1">
+      <div class="profile-left">
+        <div class="profile-avatar">
+          <div class="avatar-circle">👩‍💼</div>
+          <div class="profile-name">Andrea</div>
+          <div class="profile-title">Inversionista Privada</div>
+          <div class="profile-tag">Perfil Moderado–Agresivo</div>
+        </div>
+        <div class="profile-stats-card">
+          <div class="profile-stat-row"><span class="ps-label">Capital disponible</span><span class="ps-val" style="color:var(--gold-dark);">$400,000 USD</span></div>
+          <div class="profile-stat-row"><span class="ps-label">Horizonte de inversión</span><span class="ps-val">Largo plazo (30+ años)</span></div>
+          <div class="profile-stat-row"><span class="ps-label">Moneda base</span><span class="ps-val">Dólares (USD)</span></div>
+          <div class="profile-stat-row"><span class="ps-label">Mercados</span><span class="ps-val">NYSE, NASDAQ, BMV</span></div>
+          <div class="profile-stat-row"><span class="ps-label">Rebalanceo</span><span class="ps-val">Trimestral</span></div>
+        </div>
+      </div>
+      <div class="profile-right">
+        <div class="profile-card anim-slide-r anim-delay-2">
+          <div class="pc-icon">🎯</div>
+          <div class="pc-title">Objetivo Principal</div>
+          <div class="pc-value">Crecimiento patrimonial</div>
+          <div class="pc-desc">Maximizar el rendimiento ajustado por riesgo en el largo plazo mediante diversificación global y optimización cuantitativa (Markowitz).</div>
+        </div>
+        <div class="profile-card gold anim-slide-r anim-delay-3">
+          <div class="pc-icon">⏱️</div>
+          <div class="pc-title">Horizonte de Inversión</div>
+          <div class="pc-value">30 años (Largo Plazo)</div>
+          <div class="pc-desc">Permite capitalización compuesta máxima. Con un rendimiento anual del 21.1%, $400K se convierten en <strong>$203M+ en 30 años</strong> (escenario base).</div>
+        </div>
+        <div class="profile-card green anim-slide-r anim-delay-4">
+          <div class="pc-icon">⚖️</div>
+          <div class="pc-title">Tolerancia al Riesgo</div>
+          <div class="pc-value">Moderada – Agresiva</div>
+          <div class="pc-desc">Andrea acepta volatilidad para maximizar rendimiento. Beta portafolio = 0.76 (defensivo relativo al S&P 500). VaR controlado al 99%.</div>
+          <div class="risk-meter">
+            <div class="risk-track"><div class="risk-fill" style="width:70%"></div></div>
+            <div class="risk-labels"><span>Conservador</span><span>Moderado</span><span>Agresivo</span></div>
+          </div>
+        </div>
+        <div class="profile-card anim-slide-r anim-delay-5">
+          <div class="pc-icon">🔒</div>
+          <div class="pc-title">Restricciones y Liquidez</div>
+          <div class="pc-value">Mercados líquidos</div>
+          <div class="pc-desc">Todos los activos cotizan en bolsas reguladas (NYSE, NASDAQ, BMV). Sin instrumentos alternativos ilíquidos. Peso máximo por activo: 10%. Peso mínimo: 3%.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Análisis basado en el Caso Actinver · Perfil IPS</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 4 · CONTEXTO MACROECONÓMICO                    -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-macro" data-title="Contexto Macroeconómico">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Acto II · Entorno Económico</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Acto II – Entorno Económico</div>
+      <h2 class="slide-title">¿Por qué ahora y por qué estos sectores?</h2>
+    </div>
+    <div class="macro-grid anim-fade-up anim-delay-1">
+      <div class="macro-box">
+        <div class="macro-box-title"><div class="macro-box-icon">🌍</div>Ciclo Económico y Tendencias</div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>IA y semiconductores:</strong> NVIDIA y Broadcom lideran la revolución de inteligencia artificial. El gasto en centros de datos crece &gt;30% anual. Catalizador de largo plazo.</div></div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Sector Salud – superciclo:</strong> Eli Lilly con Mounjaro/Zepbound domina el mercado de obesidad ($150B+). AbbVie y Merck mantienen pipelines sólidos.</div></div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Tasas en descenso:</strong> La Fed inicia ciclo de baja de tasas. Beneficia activos de riesgo y empresas financieras (JPMorgan).</div></div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Nearshoring México:</strong> ALSEA y GRUMAB capturan el crecimiento del consumo doméstico e inversión extranjera que llega a México.</div></div>
+      </div>
+      <div class="macro-box">
+        <div class="macro-box-title"><div class="macro-box-icon">⚡</div>Oportunidades Identificadas</div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Tech con fundamentales sólidos:</strong> AVGO (P/E fwd 23x) y NVDA (P/E fwd 17x) cotizan con descuento relativo a sus tasas de crecimiento (EPS next 5Y &gt;40%).</div></div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Energía defensiva:</strong> XOM con beta 0.17 actúa como ancla. XLE ETF diversifica exposición. Dividendos estables &gt;3%.</div></div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Dividendos y cobertura:</strong> VYM (Vanguard High Dividend Yield) protege contra correcciones con flujo de caja recurrente.</div></div>
+        <div class="macro-item"><div class="macro-bullet"></div><div class="macro-text"><strong>Financieros en expansión:</strong> JPMorgan con ROE 16.4% y beta 1.0 captura el crecimiento del ciclo de crédito y banca de inversión.</div></div>
+      </div>
+      <div class="macro-box">
+        <div class="macro-box-title"><div class="macro-box-icon">🔴</div>Riesgos Monitoreados</div>
+        <div class="macro-item"><div class="macro-bullet" style="background:var(--danger)"></div><div class="macro-text"><strong>Concentración en Tech:</strong> Mitigado limitando AVGO + NVDA al 20% del portafolio.</div></div>
+        <div class="macro-item"><div class="macro-bullet" style="background:var(--danger)"></div><div class="macro-text"><strong>Riesgo cambiario MXN:</strong> Activos mexicanos (ALSEA, GRUMAB) representan solo 13% del portafolio.</div></div>
+        <div class="macro-item"><div class="macro-bullet" style="background:var(--warning)"></div><div class="macro-text"><strong>Regulación en salud:</strong> Negociación de precios de medicamentos (IRA). Monitoreado en LLY, MRK, ABBV.</div></div>
+        <div class="macro-item"><div class="macro-bullet" style="background:var(--warning)"></div><div class="macro-text"><strong>Volatilidad energética:</strong> Exposición en energía limitada al 6% (XOM + XLE), mitigando riesgo de precio del petróleo.</div></div>
+      </div>
+      <div class="macro-box">
+        <div class="macro-box-title"><div class="macro-box-icon">📍</div>Sectores Favorecidos 2025–2026</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+          <div class="sector-tags">
+            <span class="sector-tag tech">🖥 Tecnología / IA</span>
+            <span class="sector-tag health">💊 Salud / Biotech</span>
+          </div>
+          <div class="sector-tags">
+            <span class="sector-tag finance">🏦 Financiero</span>
+            <span class="sector-tag cons">🛒 Consumo México</span>
+          </div>
+          <div class="sector-tags">
+            <span class="sector-tag energy">⛽ Energía Defensiva</span>
+            <span class="sector-tag etf">📦 ETFs Dividendos</span>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:14px;">
+          <p class="text-xs text-gray" style="line-height:1.6;">La combinación de <strong>crecimiento (Tech, Salud)</strong> + <strong>valor (Energía, Financiero)</strong> + <strong>estabilidad (ETFs)</strong> crea un portafolio para cualquier entorno de mercado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Análisis macroeconómico con base en datos públicos y el caso Actinver</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 5 · TESIS DE INVERSIÓN                         -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-tesis" data-title="Tesis de Inversión">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Acto III · Estrategia</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Tesis de Inversión</div>
+      <h2 class="slide-title">¿Por qué esta estrategia? ¿Por qué ahora?</h2>
+    </div>
+    <div class="tesis-grid anim-fade-up anim-delay-1">
+      <div class="tesis-card">
+        <div class="tc-number">01</div>
+        <div class="tc-sector">Tecnología · 20%</div>
+        <div class="tc-title">Líderes de la Revolución de Inteligencia Artificial</div>
+        <div class="tc-desc">NVIDIA domina el mercado de GPUs para IA con 80%+ de participación. Broadcom (AVGO) provee semiconductores personalizados (ASICs) para hyperscalers. EPS Next 5Y: AVGO +49.6%, NVDA +44.1%.</div>
+        <div class="tc-tickers"><span class="ticker-badge">AVGO</span><span class="ticker-badge">NVDA</span></div>
+      </div>
+      <div class="tesis-card">
+        <div class="tc-number">02</div>
+        <div class="tc-sector">Salud · 28%</div>
+        <div class="tc-title">Superciclo en Biofarma y Medicamentos de Peso</div>
+        <div class="tc-desc">Eli Lilly lidera el mercado de GLP-1 (obesidad, diabetes). Merck y AbbVie tienen pipelines con múltiples catalizadores. ROE sectorial promedio: 415%. Beta bajo (0.22–0.51) = defensivo.</div>
+        <div class="tc-tickers"><span class="ticker-badge">LLY</span><span class="ticker-badge">MRK</span><span class="ticker-badge">ABBV</span></div>
+      </div>
+      <div class="tesis-card">
+        <div class="tc-number">03</div>
+        <div class="tc-sector">Financiero · 10%</div>
+        <div class="tc-title">La Mejor Institución Bancaria del Mundo</div>
+        <div class="tc-desc">JPMorgan Chase con ROE 16.4%, EPS creciendo a 8.9% anual por 5 años. Se beneficia del ciclo de crédito y la actividad de banca de inversión. P/E forward razonable: 12.6x.</div>
+        <div class="tc-tickers"><span class="ticker-badge">JPM</span></div>
+      </div>
+      <div class="tesis-card">
+        <div class="tc-number">04</div>
+        <div class="tc-sector">Consumo México · 13%</div>
+        <div class="tc-title">Nearshoring y Crecimiento del Consumo Doméstico</div>
+        <div class="tc-desc">ALSEA opera Domino's, Starbucks, Burger King en México. GRUMAB es el mayor productor de tortillas del mundo con márgenes brutos de 38.8%. Beneficiarios del nearshoring y el poder adquisitivo en alza.</div>
+        <div class="tc-tickers"><span class="ticker-badge">ALSEA</span><span class="ticker-badge">GRUMAB</span></div>
+      </div>
+      <div class="tesis-card">
+        <div class="tc-number">05</div>
+        <div class="tc-sector">Energía · 6%</div>
+        <div class="tc-title">Ancla Defensiva con Dividendos Estables</div>
+        <div class="tc-desc">Exxon Mobil (XOM) con beta 0.17 y dividendo creciente actúa como ancla. XLE ETF amplía exposición al sector con menor riesgo específico. Gross Margin XOM: 20.9%.</div>
+        <div class="tc-tickers"><span class="ticker-badge">XOM</span><span class="ticker-badge">XLE</span></div>
+      </div>
+      <div class="tesis-card">
+        <div class="tc-number">06</div>
+        <div class="tc-sector">ETFs Globales · 23%</div>
+        <div class="tc-title">Diversificación Eficiente y Cobertura Sistémica</div>
+        <div class="tc-desc">VYM (Vanguard High Dividend) provee estabilidad y flujo de dividendos. ACTI500 como exposición al S&P 500. APX como vehículo de renta variable mexicana diversificada.</div>
+        <div class="tc-tickers"><span class="ticker-badge">VYM</span><span class="ticker-badge">ACTI500</span><span class="ticker-badge">APX</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Datos fundamentales: Bloomberg / Caso Actinver / Excel de portafolio</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 6 · DISTRIBUCIÓN SECTORIAL                     -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-sector" data-title="Distribución Sectorial">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Distribución Sectorial</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Construcción del Portafolio</div>
+      <h2 class="slide-title">Distribución Sectorial y Pesos</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="anim-fade-up anim-delay-1">
+      <div class="chart-box" style="padding:0;">
+        <div class="chart-box-header" style="padding:14px 18px 8px;">
+          <div><div class="chart-box-title">Distribución por Sector</div><div class="chart-box-sub">Donut interactivo · Hover para detalles</div></div>
+        </div>
+        <div id="chart-donut" style="height:280px;padding:0 8px;"></div>
+        <div class="donut-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#059669"></div><span class="legend-label">Salud</span><span class="legend-pct">28%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#4f46e5"></div><span class="legend-label">Tecnología</span><span class="legend-pct">20%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#C5A059"></div><span class="legend-label">ETFs / RF</span><span class="legend-pct">23%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#1d4ed8"></div><span class="legend-label">Financiero</span><span class="legend-pct">10%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><span class="legend-label">Consumo Discr.</span><span class="legend-pct">13%</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div><span class="legend-label">Energía</span><span class="legend-pct">6%</span></div>
+        </div>
+      </div>
+      <div class="chart-box" style="padding:0;">
+        <div class="chart-box-header" style="padding:14px 18px 8px;">
+          <div><div class="chart-box-title">Peso por Activo (Max Sharpe)</div><div class="chart-box-sub">Ordenado de mayor a menor · Rango: 3%–10%</div></div>
+        </div>
+        <div id="chart-weights" style="height:360px;padding:0 8px 8px;"></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:14px;" class="anim-fade-up anim-delay-3">
+      <div class="metric-card highlight"><div class="metric-val gold">10%</div><div class="metric-lbl">Peso Máximo</div><div class="metric-sub">8 activos</div></div>
+      <div class="metric-card"><div class="metric-val">13</div><div class="metric-lbl">Activos</div><div class="metric-sub">Total portafolio</div></div>
+      <div class="metric-card"><div class="metric-val">3%</div><div class="metric-lbl">Peso Mínimo</div><div class="metric-sub">4 activos</div></div>
+      <div class="metric-card highlight"><div class="metric-val gold">21.1%</div><div class="metric-lbl">Rend. Anual</div><div class="metric-sub">Max Sharpe</div></div>
+      <div class="metric-card positive"><div class="metric-val green">1.23</div><div class="metric-lbl">Sharpe</div><div class="metric-sub">Óptimo</div></div>
+      <div class="metric-card"><div class="metric-val">$400K</div><div class="metric-lbl">Capital</div><div class="metric-sub">Inicial</div></div>
+      <div class="metric-card"><div class="metric-val">70%</div><div class="metric-lbl">Global</div><div class="metric-sub">vs 30% México</div></div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Pesos optimizados mediante Solver Markowitz · Excel Portafolio final Actinver.xlsx</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 7 · CONSTRUCCIÓN DEL PORTAFOLIO                -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-construccion" data-title="Construcción del Portafolio">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Construcción del Portafolio</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Selección de Activos</div>
+      <h2 class="slide-title">Ficha técnica completa del portafolio</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:18px;" class="anim-fade-up anim-delay-1">
+      <div class="assets-table-wrapper">
+        <table class="assets-table">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Empresa</th>
+              <th>Sector</th>
+              <th>Peso</th>
+              <th>Precio</th>
+              <th>P/E Fwd</th>
+              <th>Beta</th>
+              <th>ROE%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="ticker-badge">AVGO</span></td><td>Broadcom</td><td><span class="sector-tag tech" style="padding:2px 8px;font-size:10px;">Tecnología</span></td><td><b>10%</b></td><td>$426.58</td><td>23.5x</td><td>1.42</td><td>33.4%</td></tr>
+            <tr><td><span class="ticker-badge">NVDA</span></td><td>NVIDIA</td><td><span class="sector-tag tech" style="padding:2px 8px;font-size:10px;">Tecnología</span></td><td><b>10%</b></td><td>$212.74</td><td>17.2x</td><td>2.23</td><td>114.3%</td></tr>
+            <tr><td><span class="ticker-badge">LLY</span></td><td>Eli Lilly</td><td><span class="sector-tag health" style="padding:2px 8px;font-size:10px;">Salud</span></td><td><b>10%</b></td><td>$1,126.80</td><td>25.3x</td><td>0.51</td><td>107.6%</td></tr>
+            <tr><td><span class="ticker-badge">MRK</span></td><td>Merck</td><td><span class="sector-tag health" style="padding:2px 8px;font-size:10px;">Salud</span></td><td><b>10%</b></td><td>$119.89</td><td>12.4x</td><td>0.22</td><td>19.0%</td></tr>
+            <tr><td><span class="ticker-badge">ABBV</span></td><td>AbbVie</td><td><span class="sector-tag health" style="padding:2px 8px;font-size:10px;">Salud</span></td><td><b>8%</b></td><td>$218.63</td><td>13.5x</td><td>0.30</td><td>N/A</td></tr>
+            <tr><td><span class="ticker-badge">JPM</span></td><td>JPMorgan</td><td><span class="sector-tag finance" style="padding:2px 8px;font-size:10px;">Financiero</span></td><td><b>10%</b></td><td>$296.73</td><td>12.6x</td><td>1.00</td><td>16.4%</td></tr>
+            <tr><td><span class="ticker-badge">GRUMAB</span></td><td>Gruma</td><td><span class="sector-tag cons" style="padding:2px 8px;font-size:10px;">Consumo</span></td><td><b>10%</b></td><td>$270.00</td><td>12.8x</td><td>–</td><td>22.6%</td></tr>
+            <tr><td><span class="ticker-badge">VYM</span></td><td>Vanguard HD</td><td><span class="sector-tag etf" style="padding:2px 8px;font-size:10px;">ETF Div.</span></td><td><b>10%</b></td><td>$158.32</td><td>–</td><td>–</td><td>–</td></tr>
+            <tr><td><span class="ticker-badge">XLE</span></td><td>Energy SPDR</td><td><span class="sector-tag energy" style="padding:2px 8px;font-size:10px;">Energía ETF</span></td><td><b>10%</b></td><td>$56.95</td><td>–</td><td>–</td><td>–</td></tr>
+            <tr><td><span class="ticker-badge">ALSEA</span></td><td>Alsea</td><td><span class="sector-tag cons" style="padding:2px 8px;font-size:10px;">Consumo</span></td><td><b>3%</b></td><td>$52.66</td><td>18.6x</td><td>–</td><td>26.5%</td></tr>
+            <tr><td><span class="ticker-badge">XOM</span></td><td>ExxonMobil</td><td><span class="sector-tag energy" style="padding:2px 8px;font-size:10px;">Energía</span></td><td><b>3%</b></td><td>$146.96</td><td>14.1x</td><td>0.17</td><td>9.8%</td></tr>
+            <tr><td><span class="ticker-badge">APX</span></td><td>APX Actinver</td><td><span class="sector-tag etf" style="padding:2px 8px;font-size:10px;">ETF MX</span></td><td><b>3%</b></td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+            <tr><td><span class="ticker-badge">ACTI500</span></td><td>Actinver S&P</td><td><span class="sector-tag etf" style="padding:2px 8px;font-size:10px;">ETF S&P</span></td><td><b>3%</b></td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="chart-box" style="margin-bottom:14px;">
+          <div class="chart-box-header"><div><div class="chart-box-title">Métricas Clave por Sector</div></div></div>
+          <div id="chart-fundamentals" style="height:220px;padding:8px;"></div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-title">Restricciones del Solver (Markowitz)</div>
+          <div class="info-row"><span class="info-label">Peso mínimo por activo</span><span class="info-value blue">3%</span></div>
+          <div class="info-row"><span class="info-label">Peso máximo por activo</span><span class="info-value blue">10%</span></div>
+          <div class="info-row"><span class="info-label">Suma de pesos</span><span class="info-value blue">= 100%</span></div>
+          <div class="info-row"><span class="info-label">Sin posiciones cortas</span><span class="info-value">Sí (long-only)</span></div>
+          <div class="info-row"><span class="info-label">Objetivo</span><span class="info-value gold">Máx. Sharpe Ratio</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Fuente: Portafolio final Actinver.xlsx · Hoja: Max Sharpe</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 8 · MÉTRICAS CLAVE                             -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-metricas" data-title="Métricas Clave">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Acto IV · Validación Cuantitativa</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Acto IV – Validación Cuantitativa</div>
+      <h2 class="slide-title">Dashboard de Métricas Institucionales</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 220px;gap:18px;" class="anim-fade-up anim-delay-1">
+      <div>
+        <div class="metrics-row">
+          <div class="metric-card highlight">
+            <div class="metric-val gold" data-count="21.10" data-suffix="%" data-decimals="2">21.10%</div>
+            <div class="metric-lbl">Rendimiento Anual</div>
+            <div class="metric-sub">Max Sharpe Portfolio</div>
+          </div>
+          <div class="metric-card highlight">
+            <div class="metric-val gold" data-count="1.2283" data-decimals="4">1.2283</div>
+            <div class="metric-lbl">Sharpe Ratio</div>
+            <div class="metric-sub">vs 0.79 benchmark</div>
+          </div>
+          <div class="metric-card positive">
+            <div class="metric-val green">+16.51%</div>
+            <div class="metric-lbl">Alfa de Jensen</div>
+            <div class="metric-sub">Rendimiento extra sobre CAPM</div>
+          </div>
+        </div>
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-val">13.44%</div>
+            <div class="metric-lbl">Riesgo Anual (σ)</div>
+            <div class="metric-sub">Desviación estándar</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val">0.2170</div>
+            <div class="metric-lbl">Treynor Ratio</div>
+            <div class="metric-sub">Riesgo sistemático</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val">0.7591</div>
+            <div class="metric-lbl">Beta del Portafolio</div>
+            <div class="metric-sub">Defensivo vs mercado</div>
+          </div>
+        </div>
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-val" style="color:var(--danger)">-31.28%</div>
+            <div class="metric-lbl">VaR 99% Anual (%)</div>
+            <div class="metric-sub">Pérdida máxima esperada</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" style="color:var(--danger);font-size:20px;">-$125,100</div>
+            <div class="metric-lbl">VaR 99% (USD)</div>
+            <div class="metric-sub">Sobre capital de $400K</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" style="color:var(--danger)">-3.93%</div>
+            <div class="metric-lbl">VaR 99% Diario</div>
+            <div class="metric-sub">Riesgo diario controlado</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="info-box">
+            <div class="info-box-title">Portafolio Óptimo (Max Sharpe)</div>
+            <div class="info-row"><span class="info-label">Rendimiento Mensual</span><span class="info-value positive">1.76%</span></div>
+            <div class="info-row"><span class="info-label">Riesgo Mensual</span><span class="info-value">3.88%</span></div>
+            <div class="info-row"><span class="info-label">Varianza del Portafolio</span><span class="info-value">0.0015</span></div>
+            <div class="info-row"><span class="info-label">Tasa Libre de Riesgo</span><span class="info-value">4.59% (T-Bond)</span></div>
+          </div>
+          <div class="info-box">
+            <div class="info-box-title">Portafolio Mínima Varianza</div>
+            <div class="info-row"><span class="info-label">Rendimiento Anual</span><span class="info-value">17.69%</span></div>
+            <div class="info-row"><span class="info-label">Riesgo Anual</span><span class="info-value">12.69%</span></div>
+            <div class="info-row"><span class="info-label">Sharpe Ratio</span><span class="info-value">1.0400</span></div>
+            <div class="info-row"><span class="info-label">vs Portafolio Óptimo</span><span class="info-value gold">+3.41% menos rend.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-box" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <div style="padding:14px 14px 4px;width:100%;"><div class="chart-box-title" style="text-align:center;">Sharpe Ratio</div><div class="chart-box-sub" style="text-align:center;">Escala: 0–3 (excelente &gt;1)</div></div>
+        <div id="chart-gauge" style="width:100%;height:200px;"></div>
+        <div style="text-align:center;padding:0 12px 14px;">
+          <div style="font-size:10px;color:var(--gray-text);">Sharpe &gt; 1.0 = <strong style="color:var(--success)">Excelente</strong></div>
+          <div style="font-size:10px;color:var(--gray-text);">Sharpe &gt; 2.0 = <strong style="color:var(--success)">Excepcional</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Fuente: Portafolio final Actinver.xlsx · Hojas: Métricas, Max Sharpe, Min</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 9 · MATRIZ DE CORRELACIÓN                      -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-corr" data-title="Correlaciones">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Matriz de Correlación</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Diversificación Comprobada</div>
+      <h2 class="slide-title">Matriz de Correlaciones – Activos del Portafolio</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:20px;" class="anim-fade-up anim-delay-1">
+      <div class="chart-box">
+        <div class="chart-box-header" style="padding:14px 18px 8px;">
+          <div><div class="chart-box-title">Heatmap de Correlaciones (Anual)</div><div class="chart-box-sub">Rojo = correlación negativa | Azul = positiva · Hover para valores</div></div>
+        </div>
+        <div id="chart-corr" style="height:340px;padding:0 8px 8px;"></div>
+      </div>
+      <div>
+        <div class="info-box mb-16">
+          <div class="info-box-title">Correlaciones Clave Destacadas</div>
+          <div class="info-row"><span class="info-label">AVGO ↔ NVDA</span><span class="info-value gold">0.535 (Tech alineados)</span></div>
+          <div class="info-row"><span class="info-label">XOM ↔ XLE</span><span class="info-value gold">0.889 (mismo sector)</span></div>
+          <div class="info-row"><span class="info-label">JPM ↔ APX</span><span class="info-value positive">0.869 (mercados líquidos)</span></div>
+          <div class="info-row"><span class="info-label">AVGO ↔ GRUMAB</span><span class="info-value" style="color:var(--success)">-0.137 (diversifica)</span></div>
+          <div class="info-row"><span class="info-label">AVGO ↔ XOM</span><span class="info-value" style="color:var(--success)">-0.310 (muy negativo)</span></div>
+          <div class="info-row"><span class="info-label">LLY ↔ GRUMAB</span><span class="info-value" style="color:var(--success)">-0.092 (independientes)</span></div>
+          <div class="info-row"><span class="info-label">MRK ↔ AVGO</span><span class="info-value" style="color:var(--success)">-0.039 (sin correlación)</span></div>
+        </div>
+        <div class="highlight-box">
+          <p class="text-xs text-gray" style="line-height:1.6;margin-bottom:8px;"><strong style="color:var(--blue);">¿Por qué importa la correlación?</strong></p>
+          <p class="text-xs text-gray" style="line-height:1.6;">Las correlaciones negativas (Tech + Energía, Tech + Consumo México) reducen el riesgo del portafolio por debajo del promedio ponderado de riesgos individuales. Este es el <strong>beneficio de la diversificación de Markowitz</strong>.</p>
+        </div>
+        <div class="info-box" style="margin-top:14px;">
+          <div class="info-box-title">Estadísticas de Correlación</div>
+          <div class="info-row"><span class="info-label">Correlación promedio</span><span class="info-value">0.236</span></div>
+          <div class="info-row"><span class="info-label">Correlaciones negativas</span><span class="info-value positive">12 pares (15%)</span></div>
+          <div class="info-row"><span class="info-label">Correlación máxima</span><span class="info-value" style="color:var(--warning)">0.889 (XOM-XLE)</span></div>
+          <div class="info-row"><span class="info-label">Correlación mínima</span><span class="info-value positive">-0.310 (AVGO-XOM)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Fuente: Portafolio final Actinver.xlsx · Hoja: Max Sharpe · Correlaciones Anuales</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 10 · FRONTERA EFICIENTE                        -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-frontera" data-title="Frontera Eficiente">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Frontera Eficiente de Markowitz</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Optimización de Markowitz</div>
+      <h2 class="slide-title">Frontera Eficiente – El Portafolio Óptimo</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 300px;gap:18px;height:calc(100% - 80px);" class="anim-fade-up anim-delay-1">
+      <div class="chart-box" style="display:flex;flex-direction:column;">
+        <div class="chart-box-header" style="padding:12px 18px 6px;">
+          <div><div class="chart-box-title">Espacio Riesgo–Rendimiento (900 Portafolios Simulados)</div><div class="chart-box-sub">★ Portafolio seleccionado (Máximo Sharpe) · ◆ Mínima Varianza · Hover para métricas</div></div>
+        </div>
+        <div style="display:flex;gap:16px;padding:6px 18px;flex-wrap:wrap;">
+          <div class="fe-legend-item"><div class="fe-legend-circle" style="background:rgba(0,45,98,0.35)"></div>Portafolios simulados</div>
+          <div class="fe-legend-item"><div class="fe-legend-circle" style="background:#C5A059;width:14px;height:14px;clip-path:polygon(50% 0,100% 38%,82% 100%,18% 100%,0 38%);border-radius:0"></div>Portafolio Óptimo (★)</div>
+          <div class="fe-legend-item"><div class="fe-legend-circle" style="background:#10b981"></div>Mínima Varianza</div>
+          <div class="fe-legend-item"><div style="width:24px;height:2px;background:#C5A059;border-top:2px dashed #C5A059;"></div>&nbsp;CML (Capital Market Line)</div>
+        </div>
+        <div id="chart-frontera" style="flex:1;padding:4px 8px 8px;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="background:linear-gradient(135deg,var(--blue),var(--blue-light));border-radius:var(--radius-lg);padding:20px;color:white;">
+          <div style="font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">★ Portafolio Seleccionado</div>
+          <div style="font-size:28px;font-weight:900;color:var(--gold);margin-bottom:4px;">Máx. Sharpe</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-bottom:16px;">Mejor perfil rendimiento-riesgo</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:6px;">
+              <span style="font-size:11px;color:rgba(255,255,255,0.65);">Rendimiento</span>
+              <span style="font-size:13px;font-weight:800;color:var(--gold);">21.10%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:6px;">
+              <span style="font-size:11px;color:rgba(255,255,255,0.65);">Riesgo</span>
+              <span style="font-size:13px;font-weight:700;color:white;">13.44%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;">
+              <span style="font-size:11px;color:rgba(255,255,255,0.65);">Sharpe Ratio</span>
+              <span style="font-size:16px;font-weight:900;color:var(--gold);">1.2283</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-title">Comparativa de Portafolios</div>
+          <div class="info-row"><span class="info-label">Estrategia</span><span class="info-value" style="font-size:10px;">Máx Sharpe</span></div>
+          <div class="info-row"><span class="info-label">Rendimiento</span><span class="info-value gold">21.10%</span></div>
+          <div class="info-row"><span class="info-label">Riesgo</span><span class="info-value">13.44%</span></div>
+          <div class="info-row"><span class="info-label">Sharpe</span><span class="info-value gold">1.2283</span></div>
+          <div style="height:1px;background:var(--gray-mid);margin:8px 0;"></div>
+          <div class="info-row"><span class="info-label">Estrategia</span><span class="info-value" style="font-size:10px;">Mín Varianza</span></div>
+          <div class="info-row"><span class="info-label">Rendimiento</span><span class="info-value">17.69%</span></div>
+          <div class="info-row"><span class="info-label">Riesgo</span><span class="info-value">12.69%</span></div>
+          <div class="info-row"><span class="info-label">Sharpe</span><span class="info-value">1.0400</span></div>
+        </div>
+        <div class="highlight-box">
+          <p class="text-xs" style="color:var(--blue);font-weight:700;margin-bottom:4px;">¿Por qué Max Sharpe?</p>
+          <p class="text-xs text-gray" style="line-height:1.5;">Con un Sharpe de <strong>1.2283</strong>, el portafolio genera <strong>1.23 unidades de rendimiento</strong> por cada unidad de riesgo. Es el punto óptimo sobre la Línea de Mercado de Capitales (CML).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Fuente: Portafolio final Actinver.xlsx · Hoja: Frontera Eficiente · Optimización Solver</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 11 · MONTE CARLO                               -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-mc" data-title="Simulación Monte Carlo">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Simulación Monte Carlo</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Robustez bajo Incertidumbre</div>
+      <h2 class="slide-title">Simulación Monte Carlo – 500 escenarios, 5 años</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 280px;gap:18px;height:calc(100% - 80px);" class="anim-fade-up anim-delay-1">
+      <div class="chart-box" style="display:flex;flex-direction:column;">
+        <div class="chart-box-header" style="padding:12px 18px 6px;">
+          <div><div class="chart-box-title">Evolución del Capital – 500 Simulaciones · 60 Meses</div><div class="chart-box-sub">Bandas de confianza por percentil · Hover para valores exactos</div></div>
+        </div>
+        <div id="chart-montecarlo" style="flex:1;padding:4px 8px 8px;min-height:300px;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="info-box">
+          <div class="info-box-title">Parámetros de Simulación</div>
+          <div class="info-row"><span class="info-label">Capital inicial</span><span class="info-value">$400,000</span></div>
+          <div class="info-row"><span class="info-label">Horizonte</span><span class="info-value">60 meses (5 años)</span></div>
+          <div class="info-row"><span class="info-label">Simulaciones</span><span class="info-value gold">500</span></div>
+          <div class="info-row"><span class="info-label">Rendim. mensual</span><span class="info-value positive">1.76%</span></div>
+          <div class="info-row"><span class="info-label">Riesgo mensual</span><span class="info-value">3.88%</span></div>
+          <div class="info-row"><span class="info-label">Proceso</span><span class="info-value">Browniano (GBM)</span></div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-title">Distribución de Resultados (5 años)</div>
+          <div class="info-row"><span class="info-label">P95 – Optimista</span><span class="info-value positive" id="mc-p95">calculando...</span></div>
+          <div class="info-row"><span class="info-label">P75</span><span class="info-value positive" id="mc-p75">calculando...</span></div>
+          <div class="info-row"><span class="info-label">P50 – Mediana</span><span class="info-value gold" id="mc-p50">calculando...</span></div>
+          <div class="info-row"><span class="info-label">P25</span><span class="info-value" id="mc-p25">calculando...</span></div>
+          <div class="info-row"><span class="info-label">P5 – Pesimista</span><span class="info-value" style="color:var(--danger)" id="mc-p5">calculando...</span></div>
+        </div>
+        <div class="highlight-box">
+          <p class="text-xs" style="color:var(--blue);font-weight:700;margin-bottom:4px;">Conclusión Monte Carlo</p>
+          <p class="text-xs text-gray" style="line-height:1.5;">En el <strong>50% de los escenarios</strong>, el portafolio supera su valor mediano. Incluso en el <strong>escenario pesimista (P5)</strong>, el capital se mantiene positivo, demostrando la robustez de la estrategia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Simulación: 500 trayectorias · Proceso Browniano Geométrico · μ=1.76% σ=3.88% mensual</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 12 · BACKTESTING                               -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-bt" data-title="Backtesting">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Backtesting Histórico</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Validación Histórica</div>
+      <h2 class="slide-title">Backtesting 5 años vs S&P 500 (Benchmark)</h2>
+    </div>
+    <div class="anim-fade-up anim-delay-1" style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px;">
+      <div class="metric-card positive">
+        <div class="metric-val green" style="font-size:20px;">+167%</div>
+        <div class="metric-lbl">Retorno Total</div>
+        <div class="metric-sub">Portafolio 5 años</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" style="font-size:20px;">+80%</div>
+        <div class="metric-lbl">Retorno Benchmark</div>
+        <div class="metric-sub">S&P 500 estimado</div>
+      </div>
+      <div class="metric-card highlight">
+        <div class="metric-val gold" style="font-size:20px;">+87pp</div>
+        <div class="metric-lbl">Alpha Generado</div>
+        <div class="metric-sub">Sobre benchmark</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" style="font-size:20px;">21.1%</div>
+        <div class="metric-lbl">CAGR Portafolio</div>
+        <div class="metric-sub">Anualizado</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" style="font-size:20px;color:var(--danger);">-8.4%</div>
+        <div class="metric-lbl">Max. Drawdown</div>
+        <div class="metric-sub">Caída máxima</div>
+      </div>
+    </div>
+    <div class="chart-box anim-fade-up anim-delay-2" style="display:flex;flex-direction:column;">
+      <div class="chart-box-header" style="padding:12px 18px 6px;">
+        <div><div class="chart-box-title">Rendimiento Acumulado + Drawdown (May 2021 – May 2026)</div><div class="chart-box-sub">Portafolio Andrea vs S&P 500 · Gráfico interactivo · Hover para detalles</div></div>
+      </div>
+      <div id="chart-backtesting" style="flex:1;padding:4px 8px 8px;min-height:320px;"></div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Backtesting simulado con parámetros reales del portafolio · μ=1.76% σ=3.88% mensual</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 13 · PROYECCIÓN 30 AÑOS                        -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-proj" data-title="Proyección 30 años">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Proyección a 30 Años</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">El Poder del Interés Compuesto</div>
+      <h2 class="slide-title">Así crecería el patrimonio de Andrea</h2>
+      <p class="slide-desc">Capital inicial: $400,000 USD · Rendimiento base: 21.1% anual · Sin retiros</p>
+    </div>
+    <div class="proj-highlights anim-fade-up anim-delay-1">
+      <div class="proj-milestone">
+        <div class="proj-year">Año 1</div>
+        <div class="proj-val">$484K</div>
+        <div class="proj-growth">+21.1%</div>
+      </div>
+      <div class="proj-milestone">
+        <div class="proj-year">Año 5</div>
+        <div class="proj-val">$1.03M</div>
+        <div class="proj-growth">+157%</div>
+      </div>
+      <div class="proj-milestone">
+        <div class="proj-year">Año 10</div>
+        <div class="proj-val">$2.65M</div>
+        <div class="proj-growth">+562%</div>
+      </div>
+      <div class="proj-milestone">
+        <div class="proj-year">Año 20</div>
+        <div class="proj-val big">$17.5M</div>
+        <div class="proj-growth">+4,278%</div>
+      </div>
+      <div class="proj-milestone">
+        <div class="proj-year">Año 30</div>
+        <div class="proj-val big">$116M</div>
+        <div class="proj-growth">+28,864%</div>
+      </div>
+    </div>
+    <div class="chart-box anim-fade-up anim-delay-2" style="display:flex;flex-direction:column;">
+      <div class="chart-box-header" style="padding:12px 18px 6px;">
+        <div><div class="chart-box-title">Proyección de Capital – 3 Escenarios (30 años)</div><div class="chart-box-sub">Base: 21.1% · Optimista: 25.1% · Pesimista: 13.1% · Hover para valores por año</div></div>
+      </div>
+      <div id="chart-projection" style="flex:1;padding:4px 8px 8px;min-height:240px;"></div>
+    </div>
+    <div style="margin-top:12px;" class="anim-fade-up anim-delay-3">
+      <div class="highlight-box">
+        <p class="text-xs" style="color:var(--blue);font-weight:700;margin-bottom:4px;">💡 El poder del interés compuesto al 21.1%</p>
+        <p class="text-xs text-gray" style="line-height:1.5;">$400,000 invertidos hoy se convierten en <strong style="color:var(--gold-dark);">$116M en 30 años</strong> al rendimiento del portafolio (escenario base). Incluso en el escenario pesimista (13.1%), el capital crece hasta <strong>$14.8M</strong>. El tiempo es el activo más valioso de Andrea.</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Rendimientos pasados no garantizan resultados futuros · Proyección ilustrativa</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 14 · REBALANCEO TRIMESTRAL                     -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-rebal" data-title="Rebalanceo Trimestral">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Gestión Activa</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Gestión Activa y Disciplinada</div>
+      <h2 class="slide-title">Metodología de Rebalanceo Trimestral</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="anim-fade-up anim-delay-1">
+      <div>
+        <div class="rebal-timeline" style="margin-bottom:32px;margin-top:16px;">
+          <div class="rebal-item">
+            <div class="rebal-dot gold"></div>
+            <div class="rebal-q">Q1</div>
+            <div class="rebal-desc">Revisión de pesos. Recompra de activos que cayeron por debajo del objetivo.</div>
+          </div>
+          <div class="rebal-item">
+            <div class="rebal-dot"></div>
+            <div class="rebal-q">Q2</div>
+            <div class="rebal-desc">Toma de ganancias en activos que superaron su peso máximo (10%).</div>
+          </div>
+          <div class="rebal-item">
+            <div class="rebal-dot gold"></div>
+            <div class="rebal-q">Q3</div>
+            <div class="rebal-desc">Revisión de fundamentales. ¿Hay cambios en la tesis de inversión por activo?</div>
+          </div>
+          <div class="rebal-item">
+            <div class="rebal-dot"></div>
+            <div class="rebal-q">Q4</div>
+            <div class="rebal-desc">Re-optimización anual con Solver. Actualización de parámetros de rendimiento y riesgo.</div>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-title">Reglas del Rebalanceo</div>
+          <div class="info-row"><span class="info-label">Frecuencia</span><span class="info-value">Trimestral (4 veces/año)</span></div>
+          <div class="info-row"><span class="info-label">Trigger automático</span><span class="info-value">Desviación &gt; 2% del peso objetivo</span></div>
+          <div class="info-row"><span class="info-label">Peso mínimo</span><span class="info-value blue">3% por activo</span></div>
+          <div class="info-row"><span class="info-label">Peso máximo</span><span class="info-value blue">10% por activo</span></div>
+          <div class="info-row"><span class="info-label">Costos estimados</span><span class="info-value">&lt; 0.1% por rebalanceo</span></div>
+          <div class="info-row"><span class="info-label">Re-optimización</span><span class="info-value">Anual (Markowitz / Solver)</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="info-box mb-16">
+          <div class="info-box-title">Beneficios del Rebalanceo Disciplinado</div>
+          <div class="timeline" style="margin-top:8px;">
+            <div class="tl-item">
+              <div class="tl-dot gold"></div>
+              <div class="tl-title">Control automático del riesgo</div>
+              <div class="tl-desc">Evita que un activo dominante (e.g., NVDA tras rally) eleve el riesgo del portafolio por concentración.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-title">Compra en bajas, vende en altas</div>
+              <div class="tl-desc">El rebalanceo fuerza comprar activos que cayeron y tomar utilidades en los que subieron.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot gold"></div>
+              <div class="tl-title">Mantiene el perfil óptimo</div>
+              <div class="tl-desc">El Sharpe Ratio del portafolio se mantiene cerca de 1.23 en el tiempo gracias al rebalanceo.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-title">Disciplina conductual</div>
+              <div class="tl-desc">Elimina decisiones emocionales. La regla del 10%/3% es objetiva y verificable en cualquier momento.</div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <p class="text-xs" style="color:var(--blue);font-weight:700;margin-bottom:4px;">🔄 Propuesta de revisión anual</p>
+          <p class="text-xs text-gray" style="line-height:1.5;">Cada año, el equipo de Actinver realizará una <strong>re-optimización completa</strong> actualizando rendimientos esperados, riesgos y correlaciones con datos históricos del año anterior, manteniendo el portafolio siempre en la frontera eficiente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Metodología de gestión activa · Rebalanceo automático con umbrales predefinidos</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 15 · ANÁLISIS TÉCNICO                          -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-white" id="slide-tecnico" data-title="Análisis Técnico">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Análisis Técnico</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Análisis Fundamental + Técnico</div>
+      <h2 class="slide-title">Valuación y Fundamentos por Activo</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="anim-fade-up anim-delay-1">
+      <div>
+        <div class="info-box mb-16">
+          <div class="info-box-title">Activos con Mayor Potencial (Fundamentales)</div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">LLY</span> Eli Lilly</span>
+            <span class="info-value">P/E Fwd: 25.3x · EPS Next5Y: +28.4%</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">AVGO</span> Broadcom</span>
+            <span class="info-value">P/E Fwd: 23.5x · EPS Next5Y: +49.6%</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">NVDA</span> NVIDIA</span>
+            <span class="info-value">P/E Fwd: 17.2x · EPS Next5Y: +44.1%</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">JPM</span> JPMorgan</span>
+            <span class="info-value">P/E Fwd: 12.6x · EPS Next5Y: +8.9%</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">ABBV</span> AbbVie</span>
+            <span class="info-value">P/E Fwd: 13.5x · EPS Next5Y: +21.5%</span>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-box-title">Activos Defensivos / Anclaje</div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">MRK</span> Merck</span>
+            <span class="info-value">Beta: 0.22 · Gross Margin: 73.4%</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">XOM</span> ExxonMobil</span>
+            <span class="info-value">Beta: 0.17 · Dividendo creciente</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">ABBV</span> AbbVie</span>
+            <span class="info-value">Beta: 0.30 · ROA: 2.6% estable</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label"><span class="ticker-badge">VYM</span> Vanguard HD</span>
+            <span class="info-value">Alta diversificación · Dividendo 3%+</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="info-box mb-16">
+          <div class="info-box-title">Señales Técnicas Clave (Mayo 2026)</div>
+          <div class="macro-item">
+            <div class="macro-bullet" style="background:var(--success)"></div>
+            <div class="macro-text"><strong>NVDA:</strong> Tendencia alcista de largo plazo intacta. Soportes clave en $180-$200. Múltiplos comprimidos respecto a crecimiento histórico.</div>
+          </div>
+          <div class="macro-item">
+            <div class="macro-bullet" style="background:var(--success)"></div>
+            <div class="macro-text"><strong>LLY:</strong> Momentum positivo sostenido por expansión de GLP-1. P/E forward justificado por crecimiento de EPS proyectado a 5 años.</div>
+          </div>
+          <div class="macro-item">
+            <div class="macro-bullet" style="background:var(--warning)"></div>
+            <div class="macro-text"><strong>AVGO:</strong> P/E elevado (83x trailing) pero forward PE razonable a 23.5x. Riesgo de múltiplo si el ciclo de IA se desacelera.</div>
+          </div>
+          <div class="macro-item">
+            <div class="macro-bullet" style="background:var(--success)"></div>
+            <div class="macro-text"><strong>JPM:</strong> Valoración atractiva (P/E 14.2x). Beneficiario de tasa alta + curva de rendimiento positiva. Dividendo creciente.</div>
+          </div>
+          <div class="macro-item">
+            <div class="macro-bullet" style="background:var(--success)"></div>
+            <div class="macro-text"><strong>GRUMAB:</strong> P/E 12.8x muy bajo para su posición competitiva global. Nearshoring impulsa exportaciones. Fundamentales sólidos.</div>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <p class="text-xs" style="color:var(--blue);font-weight:700;margin-bottom:4px;">📊 Selección basada en fundamentales</p>
+          <p class="text-xs text-gray" style="line-height:1.5;">Cada activo fue seleccionado combinando <strong>análisis cuantitativo</strong> (Markowitz, correlaciones) con <strong>análisis fundamental</strong> (P/E, ROE, EPS growth) y perspectiva macroeconómica sectorial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Fuente: Portafolio final Actinver.xlsx · Hoja: Métricas · Datos fundamentales Mayo 2026</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 16 · DASHBOARD                                 -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-dashboard" data-title="Dashboard">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Dashboard de Monitoreo</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Monitoreo Continuo</div>
+      <h2 class="slide-title">Dashboard Institucional del Portafolio</h2>
+    </div>
+    <div class="dashboard-grid anim-fade-up anim-delay-1">
+      <div class="db-widget">
+        <div class="db-widget-header">
+          <div class="db-widget-title">💰 Valor del Portafolio</div>
+          <div class="db-widget-tag live">● Live</div>
+        </div>
+        <div style="font-size:28px;font-weight:900;color:var(--blue);">$400,000</div>
+        <div style="font-size:11px;color:var(--gray-text);">Capital inicial · Mayo 2026</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--success);font-weight:700;">↑ Proyección Y1: $484,400</div>
+      </div>
+      <div class="db-widget">
+        <div class="db-widget-header">
+          <div class="db-widget-title">📈 Rendimiento</div>
+        </div>
+        <div style="font-size:28px;font-weight:900;color:var(--gold-dark);">21.10%</div>
+        <div style="font-size:11px;color:var(--gray-text);">Anual esperado (Max Sharpe)</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--success);font-weight:700;">vs 12.4% benchmark S&P 500</div>
+      </div>
+      <div class="db-widget">
+        <div class="db-widget-header">
+          <div class="db-widget-title">⭐ Sharpe Ratio</div>
+        </div>
+        <div style="font-size:28px;font-weight:900;color:var(--gold-dark);">1.2283</div>
+        <div style="font-size:11px;color:var(--gray-text);">Calificación: Excelente (&gt;1.0)</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--success);font-weight:700;">vs 0.79 del mercado</div>
+      </div>
+      <div class="db-widget">
+        <div class="db-widget-header">
+          <div class="db-widget-title">🛡️ VaR 99%</div>
+        </div>
+        <div style="font-size:24px;font-weight:900;color:var(--danger);">-$125,100</div>
+        <div style="font-size:11px;color:var(--gray-text);">Pérdida máxima anual esperada</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--gray-text);">= -31.28% del capital</div>
+      </div>
+      <div class="db-widget span-2">
+        <div class="db-widget-header">
+          <div class="db-widget-title">📊 Distribución de Activos por Valor (USD)</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:4px;">
+          <div style="text-align:center;padding:8px 4px;background:var(--gray-light);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;color:var(--blue);">AVGO</div>
+            <div style="font-size:11px;font-weight:800;color:var(--dark-text);">$40K</div>
+            <div style="font-size:9px;color:var(--gray-text);">10%</div>
+          </div>
+          <div style="text-align:center;padding:8px 4px;background:var(--gray-light);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;color:var(--blue);">NVDA</div>
+            <div style="font-size:11px;font-weight:800;color:var(--dark-text);">$40K</div>
+            <div style="font-size:9px;color:var(--gray-text);">10%</div>
+          </div>
+          <div style="text-align:center;padding:8px 4px;background:var(--gray-light);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;color:var(--blue);">LLY</div>
+            <div style="font-size:11px;font-weight:800;color:var(--dark-text);">$40K</div>
+            <div style="font-size:9px;color:var(--gray-text);">10%</div>
+          </div>
+          <div style="text-align:center;padding:8px 4px;background:var(--gray-light);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;color:var(--blue);">JPM</div>
+            <div style="font-size:11px;font-weight:800;color:var(--dark-text);">$40K</div>
+            <div style="font-size:9px;color:var(--gray-text);">10%</div>
+          </div>
+          <div style="text-align:center;padding:8px 4px;background:var(--gray-light);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;color:var(--blue);">MRK</div>
+            <div style="font-size:11px;font-weight:800;color:var(--dark-text);">$40K</div>
+            <div style="font-size:9px;color:var(--gray-text);">10%</div>
+          </div>
+          <div style="text-align:center;padding:8px 4px;background:var(--gray-light);border-radius:8px;">
+            <div style="font-size:10px;font-weight:700;color:var(--blue);">GRUMAB</div>
+            <div style="font-size:11px;font-weight:800;color:var(--dark-text);">$40K</div>
+            <div style="font-size:9px;color:var(--gray-text);">10%</div>
+          </div>
+          <div style="text-align:center;padding:8px 4px;background:rgba(197,160,89,0.1);border-radius:8px;border:1px solid rgba(197,160,89,0.3);">
+            <div style="font-size:10px;font-weight:700;color:var(--gold-dark);">ABBV</div>
+            <div style="font-size:11px;font-weight:800;color:var(--gold-dark);">$32K</div>
+            <div style="font-size:9px;color:var(--gray-text);">8%</div>
+          </div>
+        </div>
+      </div>
+      <div class="db-widget">
+        <div class="db-widget-header">
+          <div class="db-widget-title">⚡ Métricas de Riesgo</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div class="info-row" style="padding:4px 0;"><span class="info-label" style="font-size:11px;">Beta</span><span class="info-value" style="font-size:11px;">0.7591</span></div>
+          <div class="info-row" style="padding:4px 0;"><span class="info-label" style="font-size:11px;">Volatilidad anual</span><span class="info-value" style="font-size:11px;">13.44%</span></div>
+          <div class="info-row" style="padding:4px 0;"><span class="info-label" style="font-size:11px;">Alfa Jensen</span><span class="info-value positive" style="font-size:11px;">+16.51%</span></div>
+          <div class="info-row" style="padding:4px 0;"><span class="info-label" style="font-size:11px;">Treynor</span><span class="info-value" style="font-size:11px;">0.2170</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Dashboard de monitoreo continuo · Actualización trimestral</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 17 · CONCLUSIÓN EJECUTIVA                      -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-blue" id="slide-conclusion" data-title="Conclusión Ejecutiva">
+  <div class="slide-header" style="background:rgba(0,45,98,0.6);border-color:rgba(255,255,255,0.1);">
+    <div class="logo-area">
+      <div class="actinver-logo">
+        <div class="logo-mark" style="background:rgba(255,255,255,0.15);color:var(--gold);">A</div>
+        <span class="logo-text" style="color:white;">ACTINVER</span>
+      </div>
+      <span class="slide-tag" style="color:rgba(255,255,255,0.5);">| Acto V · Conclusión</span>
+    </div>
+    <div class="header-right"><div class="act-name" style="color:white;">Portafolio Andrea</div><div class="act-date" style="color:rgba(255,255,255,0.5);">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Acto V – Investment Thesis</div>
+      <h2 class="slide-title dark-title">¿Por qué este portafolio es la mejor opción para Andrea?</h2>
+    </div>
+    <div class="conclusion-grid anim-fade-up anim-delay-1">
+      <div class="conclusion-card">
+        <div class="cc-icon">🎯</div>
+        <div class="cc-title">Diversificación Real y Comprobada</div>
+        <div class="cc-text">13 activos en 5 sectores + ETFs, en 3 mercados (NYSE, NASDAQ, BMV). Correlación promedio de 0.236, con 12 pares negativos que reducen el riesgo por debajo del promedio individual. La diversificación es cuantitativa, no intuitiva.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="cc-icon">📈</div>
+        <div class="cc-title">Rendimiento Superior al Benchmark</div>
+        <div class="cc-text">21.10% anual vs ~12.4% del S&P 500. Alpha de Jensen de +16.51% anual. Sharpe de 1.2283 vs 0.79 del mercado. El portafolio supera al benchmark en rendimiento ajustado por riesgo en todas las métricas.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="cc-icon">🛡️</div>
+        <div class="cc-title">Riesgo Controlado y Cuantificado</div>
+        <div class="cc-text">Beta de 0.76 (defensivo). VaR 99% = -$125,100 sobre $400K. El portafolio captura solo el 76% de las caídas del mercado y el 100%+ de los alzas. Drawdown máximo histórico simulado: -8.4%.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="cc-icon">🔬</div>
+        <div class="cc-title">Validación Cuantitativa Rigurosa</div>
+        <div class="cc-text">Optimizado con Markowitz (Solver Excel). Validado con 500 simulaciones Monte Carlo. Backtesting de 5 años. Frontera eficiente calculada con 900 portafolios simulados. El portafolio seleccionado es el óptimo matemático.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="cc-icon">⏳</div>
+        <div class="cc-title">Alineado con el Horizonte de Andrea</div>
+        <div class="cc-text">Con 30 años de horizonte, $400K se proyectan a $116M (escenario base). Incluso en el pesimista, $14.8M. El rebalanceo trimestral mantiene el perfil óptimo. La estrategia aprovecha el máximo del interés compuesto.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="cc-icon">🌐</div>
+        <div class="cc-title">Exposición a Tendencias Seculares</div>
+        <div class="cc-text">IA (NVDA, AVGO), Salud/GLP-1 (LLY), Nearshoring México (ALSEA, GRUMAB), Financiero en expansión (JPM). Sectores con catalizadores de largo plazo + ETFs defensivos para navegar la volatilidad.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer" style="background:rgba(0,45,98,0.6);border-color:rgba(255,255,255,0.1);">
+    <span class="footer-left" style="color:rgba(255,255,255,0.4);">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right" style="color:rgba(255,255,255,0.4);">Propuesta preparada para Comité de Inversiones · Mayo 2026</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 18 · INVESTMENT COMMITTEE RECOMMENDATION       -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide" id="slide-committee" data-title="Comité de Inversiones" style="background:linear-gradient(135deg,#001535 0%,#002D62 60%,#003d82 100%);">
+  <div class="slide-header" style="background:rgba(0,21,53,0.8);border-color:rgba(197,160,89,0.2);">
+    <div class="logo-area">
+      <div class="actinver-logo">
+        <div class="logo-mark" style="background:var(--gold);color:var(--blue);">A</div>
+        <span class="logo-text" style="color:white;">ACTINVER</span>
+      </div>
+      <span class="slide-tag" style="color:rgba(255,255,255,0.5);">| Investment Committee</span>
+    </div>
+    <div class="header-right"><div class="act-name" style="color:white;">Portafolio Andrea</div><div class="act-date" style="color:rgba(255,255,255,0.5);">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="anim-fade-up" style="max-width:900px;margin:0 auto;">
+      <div class="committee-badge anim-fade-in">
+        <span>●</span> RECOMENDACIÓN PARA COMITÉ DE INVERSIONES
+      </div>
+      <div class="committee-rec anim-fade-up anim-delay-1">
+        El Comité de Inversiones de <span class="gold">Actinver</span> recomienda<br/>
+        la <span class="gold">APROBACIÓN</span> del Portafolio Max Sharpe<br/>
+        para el perfil patrimonial de Andrea.
+      </div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.6;" class="anim-fade-up anim-delay-2">
+        El portafolio supera en rendimiento, Sharpe Ratio y métricas de riesgo al benchmark (S&P 500),<br/>
+        está construido con metodología cuantitativa rigurosa y se alinea perfectamente con el perfil y horizonte de Andrea.
+      </div>
+      <div class="committee-card anim-fade-up anim-delay-2">
+        <div class="committee-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">📈</div>
+            <div class="pillar-val">21.10%</div>
+            <div class="pillar-lbl">Rendimiento Anual</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">⭐</div>
+            <div class="pillar-val">1.2283</div>
+            <div class="pillar-lbl">Sharpe Ratio</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🛡️</div>
+            <div class="pillar-val">0.76β</div>
+            <div class="pillar-lbl">Beta Defensivo</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🎯</div>
+            <div class="pillar-val">13</div>
+            <div class="pillar-lbl">Activos Diversificados</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div>
+            <div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Justificación</div>
+            <div class="timeline" style="padding-left:20px;">
+              <div class="tl-item"><div class="tl-dot gold"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);">Maximiza el rendimiento ajustado por riesgo (Sharpe 1.23 &gt; 1.0)</div></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);">Supera al benchmark en +8.7pp de alpha anual</div></div>
+              <div class="tl-item"><div class="tl-dot gold"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);">Validado con Monte Carlo (500 simulaciones) y backtesting 5 años</div></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);">Alineado con horizonte largo plazo y tolerancia al riesgo de Andrea</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Próximos Pasos</div>
+            <div class="timeline" style="padding-left:20px;">
+              <div class="tl-item"><div class="tl-dot gold"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);"><strong style="color:white;">Semana 1–2:</strong> Apertura de cuentas y KYC en NYSE, NASDAQ y BMV</div></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);"><strong style="color:white;">Semana 3:</strong> Ejecución de órdenes con precio promedio (DCA)</div></div>
+              <div class="tl-item"><div class="tl-dot gold"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);"><strong style="color:white;">Mes 3:</strong> Primer rebalanceo trimestral y reporte de desempeño</div></div>
+              <div class="tl-item"><div class="tl-dot"></div><div class="tl-desc" style="color:rgba(255,255,255,0.7);"><strong style="color:white;">Año 1:</strong> Re-optimización anual con nuevos parámetros Markowitz</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer" style="background:rgba(0,21,53,0.8);border-color:rgba(197,160,89,0.15);">
+    <span class="footer-left" style="color:rgba(255,255,255,0.35);">Actinver Wealth Management · Documento Confidencial · Comité de Inversiones</span>
+    <span class="footer-right" style="color:rgba(255,255,255,0.35);">Rendimientos pasados no garantizan resultados futuros · Mayo 2026</span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────── -->
+<!--  SLIDE 19 · ANEXOS                                    -->
+<!-- ───────────────────────────────────────────────────── -->
+<section class="slide slide-gray" id="slide-anexos" data-title="Anexos">
+  <div class="slide-header">
+    <div class="logo-area">
+      <div class="actinver-logo"><div class="logo-mark">A</div><span class="logo-text">ACTINVER</span></div>
+      <span class="slide-tag">| Anexos Técnicos</span>
+    </div>
+    <div class="header-right"><div class="act-name">Portafolio Andrea</div><div class="act-date">Mayo 2026</div></div>
+  </div>
+  <div class="slide-body slide-body-padded">
+    <div class="slide-title-group anim-fade-up">
+      <div class="slide-eyebrow">Información Complementaria</div>
+      <h2 class="slide-title">Anexos – Ficha Completa de Activos</h2>
+    </div>
+    <div class="annexes-table-wrapper anim-fade-up anim-delay-1" style="border:1px solid var(--gray-mid);border-radius:var(--radius-md);overflow:hidden;">
+      <table class="annexes-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Nombre</th>
+            <th>Sector</th>
+            <th>Bolsa</th>
+            <th>Peso</th>
+            <th>Capital USD</th>
+            <th>Precio</th>
+            <th>P/E</th>
+            <th>P/E Fwd</th>
+            <th>EPS</th>
+            <th>EPS 5Y↑</th>
+            <th>ROA%</th>
+            <th>ROE%</th>
+            <th>Gross Margin%</th>
+            <th>Beta</th>
+            <th>Debt/Eq</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="ticker-badge">AVGO</span></td><td>Broadcom Inc.</td><td>Tecnología</td><td>NASDAQ</td><td><b>10%</b></td><td>$40,000</td><td>$426.58</td><td>83.2x</td><td>23.5x</td><td>$5.13</td><td>49.6%</td><td>14.9%</td><td>33.4%</td><td>65.0%</td><td>1.42</td><td>0.83</td></tr>
+          <tr><td><span class="ticker-badge">NVDA</span></td><td>NVIDIA Corporation</td><td>Tecnología</td><td>NASDAQ</td><td><b>10%</b></td><td>$40,000</td><td>$212.74</td><td>32.5x</td><td>17.2x</td><td>$6.53</td><td>44.1%</td><td>83.0%</td><td>114.3%</td><td>74.2%</td><td>2.23</td><td>0.07</td></tr>
+          <tr><td><span class="ticker-badge">LLY</span></td><td>Eli Lilly and Co.</td><td>Salud</td><td>NYSE</td><td><b>10%</b></td><td>$40,000</td><td>$1,126.80</td><td>40.6x</td><td>25.3x</td><td>$27.78</td><td>28.4%</td><td>24.5%</td><td>107.6%</td><td>82.8%</td><td>0.51</td><td>1.39</td></tr>
+          <tr><td><span class="ticker-badge">MRK</span></td><td>Merck &amp; Co.</td><td>Salud</td><td>NYSE</td><td><b>10%</b></td><td>$40,000</td><td>$119.89</td><td>33.7x</td><td>12.4x</td><td>$3.55</td><td>6.0%</td><td>7.3%</td><td>19.0%</td><td>73.4%</td><td>0.22</td><td>1.07</td></tr>
+          <tr><td><span class="ticker-badge">ABBV</span></td><td>AbbVie Inc.</td><td>Salud</td><td>NYSE</td><td><b>8%</b></td><td>$32,000</td><td>$218.63</td><td>107.8x</td><td>13.5x</td><td>$2.03</td><td>21.5%</td><td>2.6%</td><td>N/A</td><td>70.6%</td><td>0.30</td><td>N/A</td></tr>
+          <tr><td><span class="ticker-badge">JPM</span></td><td>JPMorgan Chase</td><td>Financiero</td><td>NYSE</td><td><b>10%</b></td><td>$40,000</td><td>$296.73</td><td>14.2x</td><td>12.6x</td><td>$20.88</td><td>8.9%</td><td>1.3%</td><td>16.4%</td><td>N/A</td><td>1.00</td><td>3.49</td></tr>
+          <tr><td><span class="ticker-badge">GRUMAB</span></td><td>Gruma S.A.B.</td><td>Consumo Discr.</td><td>BMV</td><td><b>10%</b></td><td>$40,000</td><td>$270.00</td><td>12.8x</td><td>N/A</td><td>$1.47</td><td>N/A</td><td>11.0%</td><td>22.6%</td><td>38.8%</td><td>N/A</td><td>0.79</td></tr>
+          <tr><td><span class="ticker-badge">VYM</span></td><td>Vanguard High Div.</td><td>ETF Dividendos</td><td>NYSE</td><td><b>10%</b></td><td>$40,000</td><td>$158.32</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+          <tr><td><span class="ticker-badge">XLE</span></td><td>Energy Select SPDR</td><td>ETF Energía</td><td>NYSE</td><td><b>10%</b></td><td>$40,000</td><td>$56.95</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+          <tr><td><span class="ticker-badge">ALSEA</span></td><td>Alsea S.A.B.</td><td>Consumo Discr.</td><td>BMV</td><td><b>3%</b></td><td>$12,000</td><td>$52.66</td><td>18.6x</td><td>N/A</td><td>$2.99</td><td>N/A</td><td>6.5%</td><td>26.5%</td><td>67.6%</td><td>N/A</td><td>N/A</td></tr>
+          <tr><td><span class="ticker-badge">XOM</span></td><td>Exxon Mobil</td><td>Energía</td><td>NYSE</td><td><b>3%</b></td><td>$12,000</td><td>$146.96</td><td>24.8x</td><td>14.1x</td><td>$5.93</td><td>16.0%</td><td>5.5%</td><td>9.8%</td><td>20.9%</td><td>0.17</td><td>0.19</td></tr>
+          <tr><td><span class="ticker-badge">APX</span></td><td>APX Actinver</td><td>ETF México</td><td>BMV</td><td><b>3%</b></td><td>$12,000</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+          <tr><td><span class="ticker-badge">ACTI500</span></td><td>Actinver S&P 500</td><td>ETF Benchmark</td><td>BMV</td><td><b>3%</b></td><td>$12,000</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;" class="anim-fade-up anim-delay-2">
+      <div class="highlight-box">
+        <p class="text-xs" style="color:var(--blue);font-weight:700;margin-bottom:4px;">📋 Fuentes de Datos</p>
+        <p class="text-xs text-gray" style="line-height:1.5;">Todos los datos provienen del archivo <strong>Portafolio final Actinver.xlsx</strong> (hojas: Métricas, Max Sharpe, Min, Frontera Eficiente, Rendimientos). Datos fundamentales al <strong>Mayo 2026</strong>.</p>
+      </div>
+      <div class="info-box">
+        <div class="info-row"><span class="info-label">Total activos analizados</span><span class="info-value">13</span></div>
+        <div class="info-row"><span class="info-label">Capital total</span><span class="info-value gold">$400,000 USD</span></div>
+        <div class="info-row"><span class="info-label">Bolsas cubiertas</span><span class="info-value">NYSE, NASDAQ, BMV</span></div>
+        <div class="info-row"><span class="info-label">Horizonte análisis</span><span class="info-value">May 2021 – May 2026</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="footer-left">Actinver Wealth Management · Confidencial</span>
+    <span class="footer-right">Fuente: Portafolio final Actinver.xlsx · Hoja: Métricas</span>
+  </div>
+</section>
+
+</div><!-- /presentation -->
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  SCRIPTS                                              -->
+<!-- ══════════════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/presentation.js"></script>
+<script>
+// ── Post-init: llenar valores dinámicos ──
+document.addEventListener('DOMContentLoaded', () => {
+  // Monte Carlo resultados
+  setTimeout(() => {
+    const mc = runMonteCarlo(PORTFOLIO.monteCarlo);
+    const fmtUSD = v => '$' + (v/1000).toFixed(1) + 'K';
+    const setTxt = (id, val) => { const el = document.getElementById(id); if(el) el.textContent = val; };
+    setTxt('mc-p95', fmtUSD(mc.p95[60]));
+    setTxt('mc-p75', fmtUSD(mc.p75[60]));
+    setTxt('mc-p50', fmtUSD(mc.p50[60]));
+    setTxt('mc-p25', fmtUSD(mc.p25[60]));
+    setTxt('mc-p5',  fmtUSD(mc.p5[60]));
+  }, 500);
+});
+</script>
+</body>
+</html>
